@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{% block title %}Capacitacion Rafam{% endblock %}</title>
+</head>
+
+<body>
+  <div id="content" name="content">
+        <h1>Preguntas</h1>
+        <ul> 
+            <!-- Iterate over object_list -->
+            {% for object in object_list %} 
+            <!-- Display Objects -->
+                <li>{{ object.texto }}</li> 
+              
+                <hr/> 
+            <!-- If objet_list is empty  -->
+            {% empty %} 
+            <li>No hay preguntas.</li> 
+            {% endfor %} 
+        </ul> 
+    </div>
+</body>
+</html>
